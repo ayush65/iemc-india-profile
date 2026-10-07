@@ -16,7 +16,7 @@ export function Leadership() {
           subtitle="The experienced engineering minds driving strategic vision at IEMC India."
         />
 
-        <Stagger className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <Stagger className="mx-auto grid max-w-4xl gap-8 sm:grid-cols-2">
           {team.map((member) => (
             <StaggerItem key={member.name} className="h-full">
               <article className="group h-full overflow-hidden rounded-xl border border-slate-200 bg-white transition duration-300 hover:-translate-y-1.5 hover:shadow-lg">
