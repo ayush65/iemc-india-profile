@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { ChevronRight, Factory, Menu, X } from "lucide-react";
 
@@ -17,14 +17,6 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
-
-  /* Reading-progress bar pinned to the bottom edge of the header. */
-  const { scrollYProgress } = useScroll();
-  const progress = useSpring(scrollYProgress, {
-    stiffness: 120,
-    damping: 30,
-    restDelta: 0.001,
-  });
 
   const resolveHref = (href: string) =>
     href.startsWith("#") && pathname !== "/" ? `/${href}` : href;
@@ -156,12 +148,6 @@ export function Header() {
           </nav>
       ) : null}
 
-      {/* Reading progress */}
-      <motion.div
-        aria-hidden="true"
-        style={{ scaleX: progress }}
-        className="absolute inset-x-0 bottom-[-1px] h-[2px] origin-left bg-accent"
-      />
     </header>
   );
 }
