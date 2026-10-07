@@ -30,7 +30,7 @@ export const navLinks: NavLink[] = [
   { label: "Vision & Mission", href: "#vision-mission" },
   { label: "Products", href: "#products" },
   { label: "Leadership", href: "#team" },
-  { label: "Contact Us", href: "#contact", cta: true },
+  { label: "Contact Us", href: "#contact" },
 ];
 
 export const hero = {
@@ -135,6 +135,71 @@ export const contactDetails: ContactDetail[] = [
   { icon: "mail", label: "Email", value: company.email, href: `mailto:${company.email}` },
   { icon: "phone", label: "Phone", value: company.phone, href: company.phoneHref },
 ];
+
+/* -------------------------------------------------------------------------- */
+/* Homepage content (all derived from verified company information)            */
+/* -------------------------------------------------------------------------- */
+
+export const capabilities = [
+  {
+    title: "Product Lifecycle Engineering",
+    body: "Research, prototype conception, and turnkey commissioning under one engineering roof.",
+  },
+  {
+    title: "Precision Manufacturing",
+    body: "Multi-axis CNC cells, clean-room fabrication, and automated testing rigs.",
+  },
+  {
+    title: "Automation & Industrial Systems",
+    body: "Customized automation machinery and robust engineering solutions for global manufacturing.",
+  },
+  {
+    title: "Quality & Compliance",
+    body: "ASME, CE, and ISO international safety and performance benchmarks, enforced end to end.",
+  },
+  {
+    title: "Zero-Defect Standards",
+    body: "Rigorous quality processes, automated inspection, and ISO 9001:2015 adherence.",
+  },
+  {
+    title: "Technical Support",
+    body: "Dependable after-sales technical support across the product lifecycle.",
+  },
+] as const;
+
+export const industries = [
+  "Tier-1 Automotive",
+  "Heavy Machinery",
+  "Renewable Energy",
+  "Aerospace",
+  "Industrial Manufacturing",
+] as const;
+
+export const qualityPillars = [
+  "ISO 9001:2015 / ISO 14001 compliance",
+  "ASME & CE engineering benchmarks",
+  "Automated testing & inspection rigs",
+  "Six Sigma Black Belt oversight",
+  "1-year replacement warranty",
+  "5-year service assurance",
+] as const;
+
+export const processSteps = [
+  { title: "Understand", body: "Deep-dive research into the industrial requirement." },
+  { title: "Engineer", body: "Prototype conception and precision system design." },
+  { title: "Manufacture", body: "Multi-axis CNC cells and clean-room fabrication." },
+  { title: "Inspect", body: "Automated testing rigs and rigid quality benchmarks." },
+  { title: "Deliver", body: "Turnkey commissioning with long-term technical support." },
+] as const;
+
+export const whyIEMC = [
+  { title: "Industrial Precision", body: "Every component engineered and delivered to exact specification." },
+  { title: "System Automation", body: "Wireless monitoring and smart automation built for real facilities." },
+  { title: "Global Quality", body: "ASME, CE, and ISO benchmarks across every manufactured unit." },
+  { title: "Certified Engineering", body: "ISO 9001:2015 certified processes from prototype to commissioning." },
+  { title: "Zero-Defect Standards", body: "Automated inspection ensures consistency, every batch, every time." },
+  { title: "Long-Term Support", body: "Dependable after-sales support backed by a 5-year service assurance." },
+] as const;
 
 export const footer = {
   brand: company.name,

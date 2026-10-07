@@ -6,13 +6,15 @@ type Props = {
   target: number;
   suffix: string;
   label: string;
+  /** "dark" switches the figure/label for use on dark sections. */
+  tone?: "light" | "dark";
 };
 
 /**
  * Count-up metric that starts when the card scrolls into view
  * (IntersectionObserver), mirroring the original site behaviour.
  */
-export function StatCounter({ target, suffix, label }: Props) {
+export function StatCounter({ target, suffix, label, tone = "light" }: Props) {
   const [value, setValue] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -60,11 +62,21 @@ export function StatCounter({ target, suffix, label }: Props) {
 
   return (
     <div ref={ref}>
-      <span className="font-display text-[2.25rem] font-extrabold text-primary">
+      <span
+        className={`font-display text-[2.25rem] font-extrabold ${
+          tone === "dark" ? "text-white" : "text-primary"
+        }`}
+      >
         {value}
       </span>
       <span className="font-display text-[1.75rem] font-bold text-accent">{suffix}</span>
-      <span className="block text-sm font-medium text-slate-500">{label}</span>
+      <span
+        className={`block text-sm font-medium ${
+          tone === "dark" ? "text-slate-400" : "text-slate-500"
+        }`}
+      >
+        {label}
+      </span>
     </div>
   );
 }

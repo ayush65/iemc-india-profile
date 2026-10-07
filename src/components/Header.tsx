@@ -90,28 +90,24 @@ export function Header() {
 
         {/* Desktop navigation */}
         <nav aria-label="Main" className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) =>
-            link.cta ? (
-              <motion.a
-                key={link.href}
-                href={resolveHref(link.href)}
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.97 }}
-                className="rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent"
-              >
-                {link.label}
-              </motion.a>
-            ) : (
-              <motion.a
-                key={link.href}
-                href={resolveHref(link.href)}
-                whileHover={{ y: -2 }}
-                className="nav-link relative text-[0.925rem] font-medium text-slate-700 transition-colors hover:text-accent"
-              >
-                {link.label}
-              </motion.a>
-            )
-          )}
+          {navLinks.map((link) => (
+            <motion.a
+              key={link.href}
+              href={resolveHref(link.href)}
+              whileHover={{ y: -2 }}
+              className="nav-link relative text-[0.925rem] font-medium text-slate-700 transition-colors hover:text-accent"
+            >
+              {link.label}
+            </motion.a>
+          ))}
+          <motion.a
+            href={resolveHref("#contact")}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.97 }}
+            className="rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent"
+          >
+            Talk to Our Team
+          </motion.a>
         </nav>
 
         {/* Mobile toggle */}

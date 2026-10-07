@@ -78,12 +78,12 @@ export function ContactSection() {
           className="grid overflow-hidden rounded-[20px] bg-primary text-white shadow-xl md:grid-cols-[1fr_1.2fr]"
         >
           {/* ------------------------------------------------------- info */}
-          <div className="bg-gradient-to-br from-primary to-[#11284d] p-8 sm:p-10 md:p-16">
+          <div className="bg-gradient-to-br from-primary to-primary-soft p-8 sm:p-10 md:p-16">
             <span className="mb-3 inline-block text-[0.8125rem] font-bold uppercase tracking-[0.1em] text-amber-400">
-              Get In Touch
+              10 · Get In Touch
             </span>
             <h2 className="mb-4 text-3xl md:text-[2.2rem]">
-              Let&apos;s Discuss Your Project Requirements
+              Let&apos;s build what&apos;s next.
             </h2>
             <p className="mb-10 text-slate-400">
               Reach out to our engineering office for technical datasheets, quotations,

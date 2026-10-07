@@ -4,8 +4,8 @@
    DESIGN TOKENS
    ========================================================================== */
 @theme {
-  --color-primary: #0a1931;
-  --color-primary-soft: #15294a;
+  --color-primary: #14171c;
+  --color-primary-soft: #22262d;
   --color-accent: #0066f5;
   --color-accent-hover: #0050c2;
 }
@@ -35,8 +35,8 @@
     font-family: var(--font-sans);
     line-height: 1.6;
     overflow-x: hidden;
-    background-color: #f8fafc;
-    color: #0f172a;
+    background-color: #f7f8fa;
+    color: #23262d;
   }
 
   h1,
@@ -199,6 +199,44 @@
 .anim-bar {
   animation: iemc-bar 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
   transform-origin: center;
+}
+
+/* Engineering blueprint grid backdrop */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.055) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.bg-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* Fine technical crosshair accent */
+.tech-corner {
+  position: relative;
+}
+.tech-corner::before,
+.tech-corner::after {
+  content: "";
+  position: absolute;
+  background: var(--color-accent);
+}
+.tech-corner::before {
+  top: 14px;
+  left: 14px;
+  width: 22px;
+  height: 2px;
+}
+.tech-corner::after {
+  top: 14px;
+  left: 14px;
+  width: 2px;
+  height: 22px;
 }
 
 /* Nav link underline grow */

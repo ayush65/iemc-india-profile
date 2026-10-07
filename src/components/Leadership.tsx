@@ -11,7 +11,7 @@ export function Leadership() {
     <section id="team" className="section scroll-mt-24 bg-slate-50">
       <div className="container-page">
         <SectionHeading
-          tag="Executive Council"
+          tag="08 · Executive Council"
           title="Meet Our Leadership Team"
           subtitle="The experienced engineering minds driving strategic vision at IEMC India."
         />
